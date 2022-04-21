@@ -1,0 +1,19 @@
+RedirectMatch 404 secret.key
+RedirectMatch 404 quelist.json
+
+Order Deny,Allow
+Deny from all
+
+<Files "worker2.php">
+    Allow from 1.2.3.4
+    Allow from 5.6.7.8
+</Files>
+
+<Files "worker1.php">
+    Allow from 9.10.11.12
+    Allow from 13.14.15.16
+</Files>
+
+<Files "worker2.stats">
+    Allow from 17.18.19.20
+</Files>
